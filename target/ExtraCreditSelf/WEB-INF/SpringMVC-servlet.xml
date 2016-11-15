@@ -52,7 +52,9 @@
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
 				<prop key="connection.pool_size">1</prop>
 				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.current_session_context_class">thread</prop>
+				<!-- <prop key="hibernate.current_session_context_class">thread</prop> -->
+				<prop key="current_session_context_class">thread</prop>
+				
 			</props>
 		</property>
 	</bean>
@@ -64,9 +66,9 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>edu.mum.ex2.domain.User</value>
-				<!-- <value>edu.mum.ex2.domain.Task</value>
+				 <value>edu.mum.ex2.domain.Task</value>
 				<value>edu.mum.ex2.domain.Project</value>
-				<value>edu.mum.ex2.domain.Beneficiary</value> -->
+				<value>edu.mum.ex2.domain.Beneficiary</value> 
 			</list>
 		</property>
 	</bean>

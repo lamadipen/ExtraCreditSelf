@@ -6,6 +6,11 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import edu.mum.ex2.domain.Beneficiary;
 import edu.mum.ex2.domain.Project;
@@ -14,8 +19,12 @@ import edu.mum.ex2.domain.Task;
 import edu.mum.ex2.domain.User;
 import edu.mum.ex2.util.HibernetUtil;
 
-public class ProjectDaoImpl implements GenericDao {
-
+@Repository
+public class ProjectDaoImpl {
+	
+	@Autowired
+	private SessionFactory sf;
+	
 	public ProjectDaoImpl() {
 		// TODO Auto-generated constructor stub
 	}
@@ -53,12 +62,16 @@ public class ProjectDaoImpl implements GenericDao {
 
 	}
 
-	
-	public void readAll() {
+	@Transactional
+	public List<Project> readAll() {
 		// TODO Auto-generated method stub
-		EntityManager em =HibernetUtil.getEntityManager();
-		em.createQuery("from Project");
+		return (List<Project>) sf.getCurrentSession().createQuery("FROM Project").list();
 	}
+	
+	/*public List<Project> getProjects() {
+		Session s = sf.openSession();
+		return s.createQuery("select p from Project p").list();
+	}*/
 
 	
 	public Project readById(int id) {
