@@ -1,13 +1,10 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <body>
 	<h2>List of Project</h2>
-	<c:if test="${not empty listProject}">
-		<ul>
-			<c:forEach var="listValue" items="${listProject}">
-				<li>${listValue}</li>
-			</c:forEach>
-		</ul>
-	</c:if>
+	<% 
+		
+     %>
 </body>
 </html>

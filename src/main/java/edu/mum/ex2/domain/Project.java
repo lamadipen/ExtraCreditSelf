@@ -39,11 +39,11 @@ public class Project {
 		
 	}
 
-	private int getProj_id() {
+	public int getProj_id() {
 		return proj_id;
 	}
 
-	private void setProj_id(int proj_id) {
+	public void setProj_id(int proj_id) {
 		this.proj_id = proj_id;
 	}
 

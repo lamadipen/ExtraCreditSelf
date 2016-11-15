@@ -6,7 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
-import javax.transaction.Transactional;
+
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,8 +61,7 @@ public class ProjectDaoImpl {
 		// TODO Auto-generated method stub
 
 	}
-
-	@Transactional
+	@org.springframework.transaction.annotation.Transactional
 	public List<Project> readAll() {
 		// TODO Auto-generated method stub
 		return (List<Project>) sf.getCurrentSession().createQuery("FROM Project").list();

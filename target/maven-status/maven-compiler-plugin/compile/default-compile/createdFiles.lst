@@ -2,6 +2,7 @@ edu\mum\ex2\dao\ProjectDaoImpl.class
 edu\mum\ex2\dao\DAO.class
 edu\mum\ex2\dao\UserDaoImpl.class
 edu\mum\ex2\domain\Project.class
+edu\mum\ex2\controller\ProjectController.class
 edu\mum\ex2\domain\Role.class
 edu\mum\ex2\util\HibernetUtil.class
 edu\mum\ex2\dao\GenericDao.class

@@ -79,11 +79,4 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
-	<!-- <bean name="userDaoImpl" class="edu.mum.ex2.dao.UserDaoImpl">
-		<property name="sf" ref="sessionFactory"></property>
-	</bean> -->
-	
-	<!-- <bean name="userController" class="edu.mu.ex2.controller.UserController">
-	</bean> -->
-
 </beans>
